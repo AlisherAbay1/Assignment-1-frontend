@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            <h1 class="main-headline">PAGE HEADLINE</h1>
+            <h1 class="main-headline">Contact Us</h1>
             <nav class="nav-links">
                 <a href="index.html">Main</a>
                 <a href="services.html">Services</a>
@@ -18,42 +18,40 @@
                 <a href="contact.html">Contacts</a>
             </nav>
         </header>
-       <main>
-            <h1>Contact Us</h1>
+        <section id="contact-section">
+            <br /> <br />
 
             <form action="#" method="post" id="contact-form">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+                <label for="name" class="main-label">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@mail.com" required><br><br>
+                <label for="email" class="main-label">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
 
-                <label>Project Type:</label><br>
-                <input type="radio" id="landing" name="project_type" value="landing">
-                <label for="landing">Landing</label><br>
-                <input type="radio" id="fullstack" name="project_type" value="fullstack">
-                <label for="fullstack">Fullstack</label><br>
-                <input type="radio" id="backend" name="project_type" value="backend">
-                <label for="backend">Backend</label><br>
-                <input type="radio" id="other" name="project_type" value="other">
-                <label for="other">Other</label><br><br>
+                <label class="main-label">Project Type:</label>
 
-                <label for="brand_color">Project Brand Color:</label>
-                <input type="color" id="brand_color" name="brand_color"><br><br>
+                <div id="project-type-choices">
+                    <label><input type="radio" name="project_type" value="landing"> Landing</label>
+                    <label><input type="radio" name="project_type" value="fullstack"> Fullstack</label>
+                    <label><input type="radio" name="project_type" value="backend"> Backend</label>
+                    <label><input type="radio" name="project_type" value="other"> Other</label>
+                </div>
 
-                <label for="task_desc">Task Description:</label><br>
-                <textarea id="task_desc" name="task_desc" rows="4" placeholder="Describe what needs to be done"></textarea><br><br>
+                <label for="brand_color" class="main-label">Project Brand Color:</label>
+                <input type="color" id="brand_color" name="brand_color">
+
+                <label for="task_desc" class="main-label">Task Description:</label>
+                <textarea id="task_desc" name="task_desc" rows="4" placeholder="Describe what needs to be done"></textarea>
 
                 <button type="submit">Submit Request</button>
             </form>
 
-            <br>
             <img
-                src="images/map_location1.png"
-                alt="Screenshot of the map showing our office location"
-                width="50%" />
-        </main>
+                src="images/DevPulse_location.jpg"
+                alt="Screenshot of the map showing our office location" />
+        </section>
 
+        <footer>
             <p>Team: Abay Alisher, Nurmukhanbet Aral</p>
         </footer>
     </body>
