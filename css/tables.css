@@ -1,0 +1,9 @@
+#pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#pricing-table th, td {
+  border: 3px solid var(--color-border-table);
+  color: var(--color-accent-gold);
+}

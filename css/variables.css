@@ -1,0 +1,22 @@
+:root {
+  /* Цветовая палитра */
+  --bg-main: #0B132B;
+  --bg-surface: #1C2541;
+  --bg-element: #3A506B;
+  
+  --color-primary: #5BC0BE;
+  --color-primary-hover: #4AA4A2;
+  --color-accent-gold: #FFC53D;
+  --color-link-gold: #FFD700;
+  
+  --color-text-main: #E0E6ED;
+  --color-text-muted: #8D99AE;
+  --color-text-accent: #A3CEF1;
+  
+  --color-border-dark: #1C2541;
+  --color-border-medium: #3A506B;
+  --color-border-table: #1E385B;
+
+  /* Шрифты */
+  --font-serif: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
