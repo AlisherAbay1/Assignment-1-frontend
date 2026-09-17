@@ -16,14 +16,38 @@ body {
     max-width: 1500px;
 }
 
+.nav-links {
+    display: flex;
+    flex: 1;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+}
+
 .nav-links a {
+    display: flex;
     font-size: 18px;
     text-decoration: none;
     color: #FFD700;
+    justify-content: center;
+    align-items: center;
     background-color: #3A506B;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 10px;
     border-radius: 6px;
+}
+
+.nav-links .logo-img-link {
+    padding: 0px;
+    border-radius: 50%;
+}
+
+.logo-and-nav {
+    display: flex;
+    align-items: center;
+    background-color: #1C2541;
+    padding-left: 10px;
 }
 
 a {
@@ -66,13 +90,12 @@ footer p {
 
 img {
     width: 50%;
-    height: 50%;
     border-radius: 8px;
 }
 
 #logo-img {
-    width: 25%;
-    height: 25%;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -109,7 +132,7 @@ textarea {
     margin-top: 10px;
     background-color: #1C2541;
     font-family: monospace;
-    color: black;
+    color: white;
     border: 2px solid #3A506B;
 }
 
