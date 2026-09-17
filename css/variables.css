@@ -1,5 +1,4 @@
 :root {
-  /* Цветовая палитра */
   --bg-main: #0B132B;
   --bg-surface: #1C2541;
   --bg-element: #3A506B;
@@ -20,7 +19,7 @@
   --color-border-yellow: #D4A373;
 
   --card-btn-bg-teal: #5BC0BE;
-  --card-btn-hover-teal-light: #72D0CE;
+  --card-hover-teal-light: #72D0CE;
   --card-btn-shadow-coral: #E76F51;
   --card-btn-text-navy: #0B132B;
 }

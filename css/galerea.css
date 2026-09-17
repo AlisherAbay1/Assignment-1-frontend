@@ -1,0 +1,24 @@
+#grid-galerea {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+#galerea-apps {
+    display: flex;
+    color: var(--color-text-accent);
+    justify-content: center;
+}
+
+#grid-galerea img {
+    border: 4px solid var(--color-border-medium);
+    transition: all 500ms;
+}
+
+#grid-galerea img:hover {
+    border: 4px solid var(--card-hover-teal-light);
+    transform: scale(1.1);
+}
