@@ -30,7 +30,7 @@
   text-decoration: none;
   color: var(--color-link-gold);
   background-color: var(--bg-element);
-  font-family: var(--font-serif);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 10px;
   border-radius: 6px;
 }

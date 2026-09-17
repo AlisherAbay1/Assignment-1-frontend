@@ -6,6 +6,7 @@
   
   --color-primary: #5BC0BE;
   --color-primary-hover: #4AA4A2;
+  --color-border-purple-hover: #B5179E;
   --color-accent-gold: #FFC53D;
   --color-link-gold: #FFD700;
   
@@ -16,7 +17,10 @@
   --color-border-dark: #1C2541;
   --color-border-medium: #3A506B;
   --color-border-table: #1E385B;
+  --color-border-yellow: #D4A373;
 
-  /* Шрифты */
-  --font-serif: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  --card-btn-bg-teal: #5BC0BE;
+  --card-btn-hover-teal-light: #72D0CE;
+  --card-btn-shadow-coral: #E76F51;
+  --card-btn-text-navy: #0B132B;
 }
