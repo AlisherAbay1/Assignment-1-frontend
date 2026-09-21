@@ -40,3 +40,29 @@
     transform: scale(1.08);
     background-color: var(--card-hover-teal-light);
 }
+
+.faq-page .card-group {
+    display: grid;
+    margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+    .faq-page .card-group {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .faq-page .card-group {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+@media (min-width: 993px) {
+    .faq-page .card-group {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
