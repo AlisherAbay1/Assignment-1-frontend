@@ -5,33 +5,42 @@
         <title>DevPulse: projects</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/variables.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/navigation.css" />
         <!-- Author: Abay Alisher, 08.09.2026 -->
     </head>
     <body>
         <header>
             <h1 class="main-headline">Real project and our team</h1>
-            <div class="logo-and-nav">
-                <img 
-                    src="images/DevPulse_logo.jpg" 
-                    alt="logo of the DevPulse" 
-                    id="logo-img" />
-
-                <nav class="nav-links">
-                    <a href="index.html">Main</a>
-                    <a href="services.html">Services</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="about.html">About us</a>
-                    <a href="contact.html">Contacts</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="galerea.html">Galerea</a>
-                    <a href="faq.html">FAQ</a>
-                </nav>
-            </div>
+            <nav class="navbar navbar-expand-lg p-0  mb-3" style="background-color: #1C2541">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/DevPulse_logo.jpg" alt="logo of the DevPulse" width="60" class="rounded-circle">
+                    </a>
+                    <button 
+                        class="navbar-toggler" 
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <div class="navbar-nav justify-content-evenly w-100">
+                            <a href="index.html" class="nav-link text-warning bg-secondary rounded-3">Main</a>
+                            <a href="services.html" class="nav-link text-warning bg-secondary rounded-3">Services</a>
+                            <a href="projects.html" class="nav-link text-warning bg-secondary rounded-3">Projects</a>
+                            <a href="about.html" class="nav-link text-warning bg-secondary rounded-3">About us</a>
+                            <a href="contact.html" class="nav-link text-warning bg-secondary rounded-3">Contacts</a>
+                            <a href="blog.html" class="nav-link text-warning bg-secondary rounded-3">Blog</a>
+                            <a href="galerea.html" class="nav-link text-warning bg-secondary rounded-3">Galerea</a>
+                            <a href="faq.html" class="nav-link text-warning bg-secondary rounded-3">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
 
-        <section>
+        <section class="ps-2 pt-2 ps-lg-3 pt-lg-3">
             <h2>About lead developer</h2>
             <p>
                 Lead Developer: Abay Alisher. <br />
@@ -39,8 +48,8 @@
             </p>
         </section>
         
-        <section>
-            <article>
+        <section class="ps-2 pt-2 ps-lg-3 pt-lg-3">
+            <article class="ps-2 pt-2 pb-3 ps-lg-3 pt-lg-3"">
                 <h2>TaskFlow — task management system</h2>
                 <p>
                     A web app for team project collaboration: task boards, deadlines, and notifications.
@@ -52,14 +61,15 @@
                     <li>Role-based access system (admin/member/guest)</li>
                     <li>Export reports to PDF</li>
                 </ul>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">View TaskFlow</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-primary">View TaskFlow</a>
                 <br /><br />
                 <img
                     src="images/TaskFlow_screenshot.png" 
-                    alt="Screenshot of the TaskFlow project" />
+                    alt="Screenshot of the TaskFlow project" 
+                    class="w-50 rounded-2" />
             </article>
 
-            <article>
+            <article class="ps-2 pt-2 pb-3 ps-lg-3 pt-lg-3">
                 <h2>ShopEase — online electronics store</h2>
                 <p>
                     A full-fledged e-commerce platform with a product catalog, shopping cart, and online payment.
@@ -71,14 +81,15 @@
                     <li>Personal account with order history</li>
                     <li>Admin panel for product management</li>
                 </ul>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">View ShopEase</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-primary">View ShopEase</a>
                 <br /><br />
                 <img
                     src="images/ShopEase_screenshot.png" 
-                    alt="Screenshot of the ShopEase project" />
+                    alt="Screenshot of the ShopEase project"
+                    class="w-50 rounded-2" />
             </article>
 
-            <article>
+            <article class="ps-2 pt-2 pb-3 ps-lg-3 pt-lg-3">
                 <h2>FitTrack — workout tracking app.</h2>
                 <p>
                     A web service for fitness trainers: client management, training programs, and progress tracking.
@@ -90,15 +101,16 @@
                     <li>Automatic workout reminders</li>
                     <li>Responsive design for mobile devices</li>
                 </ul>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">View FitTrack</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-primary">View FitTrack</a>
                 <br /><br />
                 <img
                     src="images/FitTrack_screenshot.png" 
-                    alt="Screenshot of the FitTrack project" />
+                    alt="Screenshot of the FitTrack project"
+                    class="w-50 rounded-2" />
             </article>
         </section>
         
-        <footer>
+        <footer class="m-2 m-sm-1">
             <p>Team: Abay Alisher, Nurmukhanbet Aral</p>
         </footer>
     </body>

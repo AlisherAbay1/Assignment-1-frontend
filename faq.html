@@ -5,49 +5,73 @@
         <title>DevPulse: FAQ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/variables.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/navigation.css" />
         <link rel="stylesheet" href="css/cards.css" />
-        <!-- Task 2 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
     </head>
-<body>
-    <header>
-        <h1 class="main-headline">Contact Us</h1>
-        <div class="logo-and-nav">
-            <img 
-                src="images/DevPulse_logo.jpg" 
-                alt="logo of the DevPulse" 
-                id="logo-img" />
-            <nav class="nav-links">
-                <a href="index.html">Main</a>
-                <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About us</a>
-                <a href="contact.html">Contacts</a>
-                <a href="blog.html">Blog</a>
-                <a href="galerea.html">Galerea</a>
-                <a href="faq.html">FAQ</a>
+    <body>
+        <header>
+            <h1 class="main-headline">Contact Us</h1>
+            <nav class="navbar navbar-expand-lg p-0 mb-md-2 mb-3" style="background-color: #1C2541">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/DevPulse_logo.jpg" alt="logo of the DevPulse" width="60" class="rounded-circle">
+                    </a>
+                    <button 
+                        class="navbar-toggler" 
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <div class="navbar-nav justify-content-evenly w-100">
+                            <a href="index.html" class="nav-link text-warning bg-secondary rounded-3">Main</a>
+                            <a href="services.html" class="nav-link text-warning bg-secondary rounded-3">Services</a>
+                            <a href="projects.html" class="nav-link text-warning bg-secondary rounded-3">Projects</a>
+                            <a href="about.html" class="nav-link text-warning bg-secondary rounded-3">About us</a>
+                            <a href="contact.html" class="nav-link text-warning bg-secondary rounded-3">Contacts</a>
+                            <a href="blog.html" class="nav-link text-warning bg-secondary rounded-3">Blog</a>
+                            <a href="galerea.html" class="nav-link text-warning bg-secondary rounded-3">Galerea</a>
+                            <a href="faq.html" class="nav-link text-warning bg-secondary rounded-3">FAQ</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <main class="faq-page">
-        <div class="card-group">
-            <article class="card">
-                <h3>Delivery</h3>
-                <p>Standard delivery takes 3–5 business days. Express delivery (1–2 days) is available at checkout for an extra fee. You'll get a tracking link by email once your order ships.</p>
-            </article>
+        <main class="faq-page">
+            <div class="card-group" id="faq-cards">
+                <div class="card bg-secondary bg-gradient m-1 ms-2 p-3 p-md-1 rounded-2">
+                    <h3 class="mx-auto">Delivery</h3>
+                    <p>Standard delivery takes 3–5 business days. Express delivery (1–2 days) is available at checkout for an extra fee. You'll get a tracking link by email once your order ships.</p>
+                    <img 
+                        src="images/avtobus.png" 
+                        alt="avtobus img"
+                        class="w-50 mx-auto"/>
+                </div>
 
-            <article class="card">
-                <h3>Payment</h3>
-                <p>We accept credit/debit cards, PayPal, and bank transfer. Refunds are processed within 5–7 business days after we receive and inspect the returned item.</p>
-            </article>
+                <div class="card bg-secondary bg-gradient m-1 p-3 p-md-1 rounded-2">
+                    <h3 class="mx-auto">Payment</h3>
+                    <p>We accept credit/debit cards, PayPal, and bank transfer. Refunds are processed within 5–7 business days after we receive and inspect the returned item.</p>
+                    <img 
+                        src="images/payment.png" 
+                        alt="payment img"
+                        class="w-50 mx-auto"/>
+                </div>
 
-            <article class="card">
-                <h3>Support</h3>
-                <p>Reach us via the contact form, email, or live chat. We typically respond within 24 hours on business days (Mon–Fri).</p>
-            </article>
-        </div>
-    </main>
-</body>
+                <div class="card bg-secondary bg-gradient m-1 me-2 p-3 p-md-1 rounded-2">
+                    <h3 class="mx-auto">Support</h3>
+                    <p>Reach us via the contact form, email, or live chat. We typically respond within 24 hours on business days (Mon–Fri).</p>
+                    <img 
+                        src="images/support.png" 
+                        alt="support img"
+                        class="w-50 mx-auto"/>
+                </div>
+            </div>
+        </main>
+        <footer class="m-2 m-sm-1">
+            <p>Team: Abay Alisher, Nurmukhanbet Aral</p>
+        </footer>
+    </body>
 </html>

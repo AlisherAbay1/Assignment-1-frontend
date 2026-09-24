@@ -37,6 +37,14 @@
     background-color: var(--card-hover-teal-light);
 }
 
+#faq-cards div {
+    transition: all 500ms;
+}
+
+#faq-cards div:hover {
+    transform: scale(1.01);
+}
+
 .faq-page .card-group {
     display: grid;
 }
