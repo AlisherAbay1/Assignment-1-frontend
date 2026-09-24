@@ -1,16 +1,14 @@
 #cards-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 #cards-container .card {
     display: flex;
+    background-color: #1C2541;
     border: 3px solid var(--color-border-yellow);
     flex-direction: column;
     align-items: center;
-    padding: 10px;
     transition: all 500ms;
 }
 
@@ -22,11 +20,9 @@
 #cards-container .card-img {
     display: block;
     width: 200px;
-    margin: 10px;
 }
 
 #cards-container .card-button {
-    padding: 6px 12px;
     background-color: var(--card-btn-bg-teal);
     color: var(--card-btn-text-navy);
     font-size: 15px;
@@ -43,7 +39,6 @@
 
 .faq-page .card-group {
     display: grid;
-    margin-top: 20px;
 }
 
 @media (max-width: 576px) {

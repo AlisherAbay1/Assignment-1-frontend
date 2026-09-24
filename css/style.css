@@ -14,6 +14,10 @@ h3 {
     color: var(--color-text-accent)
 }
 
+h4 {
+    color: var(--color-text-accent)
+}
+
 .main-headline {
   color: var(--color-accent-gold);
   text-align: center;
