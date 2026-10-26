@@ -49,6 +49,10 @@ body.light .navbar {
   font-family: Lucida Sans Unicode;
 }
 
+body.light label {
+  color: black;
+}
+
 p, li {
   color: var(--color-text-main);
 }
@@ -147,4 +151,14 @@ footer p {
 .change-theme:hover {
     background-color: var(--change-theme-background);
     border-color: var(--change-theme-text);
+}
+
+.submit-button {
+  background-color: var(--submit-button-background);
+  color: var(--submit-button-text);
+}
+
+.submit-button:hover {
+  background-color: var(--submit-button-background);
+  color: var(--submit-button-text);
 }
