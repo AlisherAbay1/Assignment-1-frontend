@@ -68,3 +68,13 @@ footer p {
 .inverted {
     filter: invert(1);
 }
+
+.bi-star, .bi-star-fill {
+  color: gold;
+  font-size: 25px;
+}
+
+.rating {
+  margin-top: 10px;
+  margin-left: 10px;
+}
