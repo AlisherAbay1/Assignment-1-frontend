@@ -2,6 +2,53 @@ body {
   background-color: var(--bg-main);
 }
 
+body.light {
+  --bg-main: #F4F7FB;
+  --bg-surface: #FFFFFF;
+  --bg-element: #DCE6F0;
+  --popup-bg: #FFFFFF;
+
+  --color-primary: #2A9D9B;
+  --color-primary-hover: #1F7F7D;
+  --color-border-purple-hover: #B5179E;
+  --main-headline: #C26A00;
+  --color-link-gold: #B8860B;
+
+  --color-text-main: #0B132B;
+  --color-text-muted: #5C677D;
+  --color-text-accent: #1F5F8B;
+
+  --color-border-dark: #C5D3E0;
+  --color-border-medium: #A9BCCF;
+  --color-border-table: #BCD0E4;
+  --color-border-yellow: #C48A4A;
+
+  --card-btn-bg-teal: #2A9D9B;
+  --card-hover-teal-light: #3DB5B3;
+  --card-btn-shadow-coral: #E76F51;
+  --card-btn-text-navy: #0B132B;
+
+  --navbar-color: #E3EBF3;
+  --nav-link-color: #E0A100;
+  --nav-text-color: #2B1B00;
+
+  --card-background: #A9D3EE;
+  --star-color: #F59E0B;
+  --star-empty-color: #9A8F73;
+
+  --faq-card-background: #9caab6;
+  --change-theme-background: #6c757d;
+  --change-theme-text: #ffc107;
+}
+
+body.light .main-headline {
+  font-family: cursive;
+}
+
+body.light .navbar {
+  font-family: Lucida Sans Unicode;
+}
+
 p, li {
   color: var(--color-text-main);
 }
@@ -19,7 +66,7 @@ h4 {
 }
 
 .main-headline {
-  color: var(--color-accent-gold);
+  color: var(--main-headline);
   text-align: center;
 }
 
@@ -65,10 +112,6 @@ footer p {
   font-weight: 700;
 }
 
-.inverted {
-    filter: invert(1);
-}
-
 .bi-star, .bi-star-fill {
   color: gold;
   font-size: 25px;
@@ -77,4 +120,31 @@ footer p {
 .rating {
   margin-top: 10px;
   margin-left: 10px;
+}
+
+.navbar {
+  background-color: var(--navbar-color);
+}
+
+.navbar-nav .nav-link {
+  background-color: var(--nav-link-color);
+  color: var(--nav-text-color);
+}
+
+.star i.bi-star {
+  color: var(--star-empty-color);
+}
+
+.star i.bi-star-fill { 
+  color: var(--star-color); 
+}
+
+.change-theme {
+  background-color: var(--change-theme-background);
+  color: var(--change-theme-text);
+}
+
+.change-theme:hover {
+    background-color: var(--change-theme-background);
+    border-color: var(--change-theme-text);
 }

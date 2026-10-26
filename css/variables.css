@@ -7,7 +7,7 @@
   --color-primary: #5BC0BE;
   --color-primary-hover: #4AA4A2;
   --color-border-purple-hover: #B5179E;
-  --color-accent-gold: #FFC53D;
+  --main-headline: #FFC53D;
   --color-link-gold: #FFD700;
   
   --color-text-main: #E0E6ED;
@@ -23,4 +23,15 @@
   --card-hover-teal-light: #72D0CE;
   --card-btn-shadow-coral: #E76F51;
   --card-btn-text-navy: #0B132B;
+
+  --navbar-color: #1C2541;
+  --nav-link-color: #6c757d;
+  --nav-text-color: #ffc107;
+  --card-background: #1C2541;
+  --star-color: #FFC53D;
+  --star-empty-color: #8D99AE;
+  
+  --faq-card-background: #6c757d;
+  --change-theme-background: #E0A100;
+  --change-theme-text: #2B1B00;
 }

@@ -10,6 +10,7 @@
 
 .faq-card {
     cursor: pointer;
+    background-color: var(--faq-card-background);
 }
 
 #faq-cards {

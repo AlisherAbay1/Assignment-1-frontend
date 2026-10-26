@@ -5,7 +5,7 @@
 
 #cards-container .card {
     display: flex;
-    background-color: #1C2541;
+    background-color: var(--card-background);
     border: 3px solid var(--color-border-yellow);
     flex-direction: column;
     align-items: center;
