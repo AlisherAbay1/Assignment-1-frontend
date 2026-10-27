@@ -1,3 +1,6 @@
+const contact_form = document.getElementById("contact-form");
+const reset_button = document.querySelector(".clear-button")
+
 function handle_contact_form(e) {
     e.preventDefault();
 
@@ -32,5 +35,21 @@ function handle_contact_form(e) {
     form_success.hidden = false;
 }
 
-const contact_form = document.getElementById("contact-form");
+function reset_form() {
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const project_type = document.querySelector('input[name="project_type"]:checked');
+    const brand_color = document.getElementById("brand_color");
+    const task_desc = document.getElementById("task_desc");
+
+    name.value = '';
+    email.value = ''
+    brand_color.value = "#000000";
+    task_desc.value = '';
+    if (project_type) {
+        project_type.checked = false;
+    }
+}
+
 contact_form.addEventListener("submit", handle_contact_form);
+reset_button.addEventListener("click", reset_form)

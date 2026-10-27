@@ -20,7 +20,6 @@ for (const stars of allRatings) {
                     reached = true
                 }
             }
-            }
-    )
+        })
     }
 }

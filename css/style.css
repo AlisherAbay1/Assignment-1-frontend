@@ -156,9 +156,33 @@ footer p {
 .submit-button {
   background-color: var(--submit-button-background);
   color: var(--submit-button-text);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .submit-button:hover {
   background-color: var(--submit-button-background);
   color: var(--submit-button-text);
+}
+
+.clear-button {
+  background-color: var(--clear-button-background);
+  color: var(--clear-button-text);
+  
+}
+
+.clear-button:hover {
+  background-color: var(--clear-button-background);
+  color: var(--clear-button-text);
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#contact-form {
+  position: relative;
 }
