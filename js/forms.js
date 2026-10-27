@@ -1,6 +1,38 @@
 const contact_form = document.getElementById("contact-form");
 const reset_button = document.querySelector(".clear-button")
 
+function send_form(data, callback) {
+    fetch("http://127.0.0.1:8000/api/form", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(data)
+    })
+    .then(async response => {
+        const result = await response.json();
+        
+        callback(null, response, result);
+    })
+    .catch(error => {
+        callback(error, null, null);
+    });
+}
+
+function handle_send_result(error, response, result) {
+    if (error) {
+        form_error.textContent = "Failed to send form";
+        form_error.hidden = false;
+        return;
+    }
+    if (!response.ok) {
+        form_error.textContent = result.detail[0].msg;
+        form_error.hidden = false;
+        return
+    }
+
+    form_success.textContent = result.msg;
+    form_success.hidden = false;
+}
+
 function handle_contact_form(e) {
     e.preventDefault();
 
@@ -31,8 +63,13 @@ function handle_contact_form(e) {
         return;
     }
 
-    form_success.textContent = "Your form is accepted";
-    form_success.hidden = false;
+    const data = {
+        name: name,
+        email: email,
+        task_desc: task_desc
+    };
+
+    send_form(data, handle_send_result);
 }
 
 function reset_form() {
