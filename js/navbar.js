@@ -1,6 +1,6 @@
 const navbar = document.querySelector('.navbar-nav');
 const links = Array.from(navbar.querySelectorAll('a'));
-const clickSound = new Audio('sounds/click.wav');
+
 
 function handle_key_arrows(e) {
     const current = links.indexOf(document.activeElement);
@@ -20,10 +20,7 @@ function handle_key_arrows(e) {
     }
 }
 
-function play_click_sound() {
-    clickSound.currentTime = 0;
-    clickSound.play()
-}
+
 
 for (const link of links) {
     link.addEventListener("click", play_click_sound)
