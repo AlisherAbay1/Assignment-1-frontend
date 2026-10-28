@@ -135,6 +135,20 @@ footer p {
   color: var(--nav-text-color);
 }
 
+.star i {
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.star i:hover {
+    transform: scale(1.2);
+}
+
+.star i:active {
+    transform: scale(0.9);
+}
+
 .star i.bi-star {
   color: var(--star-empty-color);
 }

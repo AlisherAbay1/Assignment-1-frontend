@@ -20,4 +20,4 @@ function updateGreeting() {
 }
 
 updateGreeting();
-setInterval(updateGreeting, 1000);
+setInterval(updateGreeting, 60000);
