@@ -1,5 +1,8 @@
 const contact_form = document.getElementById("contact-form");
 const reset_button = document.querySelector(".clear-button")
+const form_error = document.getElementById("form_error");
+const form_success = document.getElementById("form_success");
+
 
 function send_form(data, callback) {
     fetch("http://127.0.0.1:8000/api/form", {
@@ -39,8 +42,6 @@ function handle_contact_form(e) {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const task_desc = document.getElementById("task_desc").value.trim();
-    const form_error = document.getElementById("form_error");
-    const form_success = document.getElementById("form_success");
 
     form_error.hidden = true;
     form_error.textContent = "";
