@@ -186,3 +186,12 @@ footer p {
 #contact-form {
   position: relative;
 }
+
+#welcome-section {
+  display: flex;
+  justify-content: center;
+}
+
+#welcome-section h1 {
+  color: #B5179E;
+}
