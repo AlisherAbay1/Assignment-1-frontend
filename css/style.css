@@ -211,3 +211,8 @@ footer p {
 #welcome-section h1 {
   color: #B5179E;
 }
+
+mark {
+  background: rgba(255, 235, 59, 0.8);
+  padding: 0;
+}
