@@ -1,0 +1,29 @@
+.autocomplete {
+    position: relative;
+    width: 350.2px;
+}
+
+.autocomplete input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#suggestions {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+#suggestions div {
+  padding: 6px 10px;
+  cursor: pointer;
+  color: black;
+}
+
+#suggestions div:hover {
+  background: #eee;
+}

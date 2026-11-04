@@ -21,10 +21,4 @@ function handle_key_arrows(e) {
 }
 
 
-
-for (const link of links) {
-    link.addEventListener("click", play_click_sound)
-}
-
-
 navbar.addEventListener('keydown', handle_key_arrows);
