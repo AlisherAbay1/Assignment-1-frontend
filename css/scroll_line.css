@@ -1,0 +1,19 @@
+.progress-track {
+    visibility: hidden;
+    position: sticky;
+    top: 5px;
+    height: 10px;
+    z-index: 1200;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.32);;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0px;
+    background-color: #6FFFE9;
+    border-radius: 5px;
+}
