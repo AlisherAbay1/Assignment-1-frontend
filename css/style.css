@@ -138,17 +138,17 @@ footer p {
 }
 
 .star i {
-    display: inline-block;
-    transition: transform 0.2s ease, color 0.2s ease;
-    cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
 }
 
 .star i:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .star i:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .star i.bi-star {
@@ -231,4 +231,25 @@ mark {
   to {
     transform: rotate(360deg);
   }
+}
+
+.notification {
+  display: none;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  width: 450px;
+  height: 40px;
+  background-color: rgba(28, 200, 99, 1);
+  border: 1px solid white;
+  align-items: center;
+}
+
+.notification p {
+  color: rgb(29, 24, 24);
+  font-size: large;
+  font-family: cursive;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 4px;
 }
