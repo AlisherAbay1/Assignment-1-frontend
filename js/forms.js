@@ -3,6 +3,21 @@ const reset_button = document.querySelector(".clear-button")
 const form_error = document.getElementById("form_error");
 const form_success = document.getElementById("form_success");
 
+function button_in_proccess() {
+    $(".submit-button").append('<span class="spinner"></span>');
+    $(".submit-button").prop("disabled", true);
+}
+
+function button_done() {
+    $(".submit-button .spinner").remove();
+    $(".submit-button").prop("disabled", false);
+}
+
+function sleep(ms) {
+    const start = Date.now();
+
+    while (Date.now() - start < ms) {}
+}
 
 function send_form(data, callback) {
     fetch("http://127.0.0.1:8000/api/form", {
@@ -21,6 +36,9 @@ function send_form(data, callback) {
 }
 
 function handle_send_result(error, response, result) {
+
+    button_done();
+
     if (error) {
         form_error.textContent = "Failed to send form";
         form_error.hidden = false;
@@ -70,6 +88,7 @@ function handle_contact_form(e) {
         task_desc: task_desc
     };
 
+    button_in_proccess();
     send_form(data, handle_send_result);
 }
 
