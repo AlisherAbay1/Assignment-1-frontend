@@ -253,3 +253,13 @@ mark {
   margin: 0px;
   margin-left: 4px;
 }
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.relavate-article {
+  position: relative;
+}
