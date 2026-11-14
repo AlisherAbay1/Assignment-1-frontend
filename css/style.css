@@ -55,7 +55,7 @@ body.light label {
   color: black;
 }
 
-p, li {
+p, li, label {
   color: var(--color-text-main);
 }
 
