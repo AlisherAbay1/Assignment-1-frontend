@@ -4,45 +4,6 @@ body {
   margin-right: 10px;
 }
 
-body.light {
-  --bg-main: #F4F7FB;
-  --bg-surface: #FFFFFF;
-  --bg-element: #DCE6F0;
-  --popup-bg: #FFFFFF;
-
-  --color-primary: #2A9D9B;
-  --color-primary-hover: #1F7F7D;
-  --color-border-purple-hover: #B5179E;
-  --main-headline: #C26A00;
-  --color-link-gold: #B8860B;
-
-  --color-text-main: #0B132B;
-  --color-text-muted: #5C677D;
-  --color-text-accent: #1F5F8B;
-
-  --color-border-dark: #C5D3E0;
-  --color-border-medium: #A9BCCF;
-  --color-border-table: #BCD0E4;
-  --color-border-yellow: #C48A4A;
-
-  --card-btn-bg-teal: #2A9D9B;
-  --card-hover-teal-light: #3DB5B3;
-  --card-btn-shadow-coral: #E76F51;
-  --card-btn-text-navy: #0B132B;
-
-  --navbar-color: #E3EBF3;
-  --nav-link-color: #E0A100;
-  --nav-text-color: #2B1B00;
-
-  --card-background: #A9D3EE;
-  --star-color: #F59E0B;
-  --star-empty-color: #9A8F73;
-
-  --faq-card-background: #9caab6;
-  --change-theme-background: #6c757d;
-  --change-theme-text: #ffc107;
-}
-
 body.light .main-headline {
   font-family: cursive;
 }
@@ -219,12 +180,17 @@ mark {
 
 .spinner {
   display: inline-block;
+  position: absolute;
   width: 14px;
   height: 14px;
+  top: 50%;
+  left: 50%;
   border: 2px solid white;
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  margin-top: -7px;
+  margin-left: -7px;
 }
 
 @keyframes spin {
