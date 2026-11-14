@@ -4,6 +4,7 @@ const form_error = document.getElementById("form_error");
 const form_success = document.getElementById("form_success");
 
 function button_in_proccess() {
+    $('.submit-button span').css('visibility', 'hidden');
     $(".submit-button").append('<span class="spinner"></span>');
     $(".submit-button").prop("disabled", true);
 }
@@ -11,6 +12,7 @@ function button_in_proccess() {
 function button_done() {
     $(".submit-button .spinner").remove();
     $(".submit-button").prop("disabled", false);
+    $('.submit-button span').css('visibility', 'visible');
 }
 
 function handle_contact_form(e) {

@@ -2,7 +2,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--modal-overlay-bg);
     justify-content: center;
     align-items: center;
 }
@@ -19,7 +19,7 @@
     height: 400px;
     width: 500px;
     border-radius: 5px;
-    border: 2px solid #3A506B;
+    border: 2px solid var(--modal-border);
     padding: 2px;
 
     grid-template-columns: 1fr auto;
@@ -38,7 +38,7 @@
 }
 
 .modal-windows h2 {
-    color: #0B132B;
+    color: var(--modal-heading-color);
     grid-column: 1 / -1;
     grid-row: 2;
     text-align: center;

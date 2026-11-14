@@ -8,12 +8,12 @@
     margin-left: 4px;
     margin-right: 4px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.32);;
+    background-color: var(--progress-track-bg);
 }
 
 .progress-bar {
     height: 100%;
     width: 0px;
-    background-color: #6FFFE9;
+    background-color: var(--progress-bar-bg);
     border-radius: 5px;
 }

@@ -12,10 +12,6 @@ body.light .navbar {
   font-family: Lucida Sans Unicode;
 }
 
-body.light label {
-  color: black;
-}
-
 p, li, label {
   color: var(--color-text-main);
 }
@@ -46,7 +42,7 @@ h4 {
   display: flex;
   width: 220px;
   height: 45px;
-  border: 3px solid brown;
+  border: 3px solid var(--clock-time);
   top: 6px;
   right: 6px;
   align-items: center;
@@ -80,7 +76,6 @@ footer p {
 }
 
 .bi-star, .bi-star-fill {
-  color: gold;
   font-size: 25px;
 }
 
@@ -170,11 +165,11 @@ footer p {
 }
 
 #welcome-section h1 {
-  color: #B5179E;
+  color: var(--welcome-text);
 }
 
 mark {
-  background: rgba(255, 235, 59, 0.8);
+  background: var(--mark);
   padding: 0;
 }
 
@@ -185,7 +180,7 @@ mark {
   height: 14px;
   top: 50%;
   left: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--spinner);
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -206,13 +201,13 @@ mark {
   right: 8px;
   width: 450px;
   height: 40px;
-  background-color: rgba(28, 200, 99, 1);
-  border: 1px solid white;
+  background-color: var(--notification);
+  border: 1px solid var(--notification-border);
   align-items: center;
 }
 
 .notification p {
-  color: rgb(29, 24, 24);
+  color: var(--notification-text);
   font-size: large;
   font-family: cursive;
   padding: 0px;

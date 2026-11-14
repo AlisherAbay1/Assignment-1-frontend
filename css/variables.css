@@ -39,6 +39,26 @@
   --submit-button-text: white;
   --clear-button-background: #5ec099;
   --clear-button-text: rgb(42, 17, 36);
+
+  --clock-time: brown;
+  --welcome-text: #B5179E;
+  --mark: rgba(255, 235, 59, 0.8);
+  --spinner: white;
+  --notification: rgba(28, 200, 99, 1);
+  --notification-border: white;
+  --notification-text: rgb(29, 24, 24);
+
+  --suggestions-bg: #fff;
+  --suggestions-border: #ccc;
+  --suggestions-text: black;
+  --suggestions-hover-bg: #eee;
+
+  --progress-track-bg: rgba(255, 255, 255, 0.32);
+  --progress-bar-bg: #6FFFE9;
+
+  --modal-heading-color: #0B132B;
+  --modal-border: #3A506B;
+  --modal-overlay-bg: rgba(0, 0, 0, 0.5);
 }
 
 body.light {
@@ -78,4 +98,11 @@ body.light {
   --faq-card-background: #9caab6;
   --change-theme-background: #6c757d;
   --change-theme-text: #ffc107;
+
+  --clock-time: rgb(25, 0, 255);
+  --welcome-text: #4f7400;
+  --spinner: black;
+  --notification-border: black;
+
+  --progress-bar-bg: #3df444;
 }

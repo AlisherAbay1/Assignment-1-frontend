@@ -14,16 +14,16 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: #fff;
-  border: 1px solid #ccc;
+  background: var(--suggestions-bg);
+  border: 1px solid var(--suggestions-border);
 }
 
 #suggestions div {
   padding: 6px 10px;
   cursor: pointer;
-  color: black;
+  color: var(--suggestions-text);
 }
 
 #suggestions div:hover {
-  background: #eee;
+  background: var(--suggestions-hover-bg);
 }
