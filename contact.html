@@ -49,11 +49,10 @@
         <div class="container-fluid border border-dark my-3 mx-1 p-2 p-md-4">
             <div class="row justify-content">
                 <div class="col-12 col-md-6">
-                    <form action="#" method="post" id="contact-form" class="d-flex flex-column gap-3 align-items-center">
-                        <label for="name" class="main-label">Your Name:</label>
-                        <input type="text" id="name" name="name" class="form-control w-75" placeholder="Enter your name" required>
-                        <label for="email" class="main-label">Your Email:</label>
-                        <input type="email" id="email" name="email" class="form-control w-75" placeholder="example@mail.com" required>
+                    <form action="#" method="post" id="contact-form" class="d-flex flex-column gap-3 align-items-center" novalidate>
+                        <label for="project-name" class="main-label">Project Name:</label>
+                        <input type="text" id="project-name" name="project_name" class="form-control w-75" placeholder="Enter your project name">
+                        <div class="field-error text-danger small w-75" id="project-name-error" hidden></div>
                         <label class="main-label">Project Type:</label>
                         <div class="d-flex flex-column">
                             <div class="form-check">
@@ -76,22 +75,25 @@
                                 <label for="other" class="form-check-label">Other</label>
                             </div>
                         </div>
-                        <label for="tech" class="main-label">Technology:</label>
+                        <div class="field-error text-danger small w-75 text-center" id="project-type-error" hidden></div>
+                        <label for="tech" class="main-label">Technology (optional):</label>
                         <div class="autocomplete w-75">
-                            <input type="text" id="tech" name="tech" autocomplete="off" class="form-control" placeholder="What tech ctack should be used?">
+                            <input type="text" id="tech" name="tech" autocomplete="off" class="form-control" placeholder="What tech stack should be used?">
                             <div id="suggestions"></div>
                         </div>
+                        <div class="field-error text-danger small w-75" id="tech-error" hidden></div>
                         <label for="brand-color" class="main-label">Project Brand Color:</label>
-                        <input type="color" id="brand-color" name="brand_color" class="form-control form-control-color" >
+                        <input type="color" id="brand-color" name="brand_color" class="form-control form-control-color">
+                        <div class="field-error text-danger small w-75 text-center" id="brand-color-error" hidden></div>
                         <label for="task-desc" class="main-label">Task Description:</label>
-                        <textarea id="task-desc" name="task_desc" class="form-control-color w-75" rows="4" placeholder="Describe what needs to be done"></textarea>
+                        <textarea id="task-desc" name="task_desc" class="form-control w-75" rows="4" placeholder="Describe what needs to be done"></textarea>
+                        <div class="field-error text-danger small w-75" id="task-desc-error" hidden></div>
                         <div id="buttons-container">
                             <button type="submit" class="btn submit-button">
                                 <span>Submit</span>
                             </button>
                             <button type="button" class="btn clear-button">Clear</button>
                         </div>
-                        
                     </form>
                     <div class="bg-danger text-white border border-info-subtle p-2 m-2" id="form-error" hidden></div>
                     <div class="bg-success text-white border border-info-subtle p-2 m-2" id="form-success" hidden></div>  

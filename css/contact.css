@@ -7,3 +7,7 @@
   justify-content: flex-end;
   width: 100%;
 }
+
+.field-error {
+  margin-top: -0.5rem;
+}
