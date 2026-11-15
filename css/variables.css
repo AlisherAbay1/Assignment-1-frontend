@@ -6,9 +6,9 @@
   
   --color-primary: #5BC0BE;
   --color-primary-hover: #4AA4A2;
-  --color-border-purple-hover: #B5179E;
+  --card-border-hover: #B5179E;
   --main-headline: #FFC53D;
-  --color-link-gold: #FFD700;
+  --color-link: #FFD700;
   
   --color-text-main: #E0E6ED;
   --color-text-muted: #8D99AE;
@@ -17,12 +17,12 @@
   --color-border-dark: #1C2541;
   --color-border-medium: #3A506B;
   --color-border-table: #1E385B;
-  --color-border-yellow: #D4A373;
+  --card-border: #D4A373;
 
-  --card-btn-bg-teal: #5BC0BE;
-  --card-hover-teal-light: #72D0CE;
-  --card-btn-shadow-coral: #E76F51;
-  --card-btn-text-navy: #0B132B;
+  --card-btn-bg: #5BC0BE;
+  --accent-hover: #72D0CE;
+  --card-btn-shadow: #E76F51;
+  --card-btn-text: #0B132B;
 
   --navbar-color: #1C2541;
   --nav-link-color: #6c757d;
@@ -69,9 +69,9 @@ body.light {
 
   --color-primary: #2A9D9B;
   --color-primary-hover: #1F7F7D;
-  --color-border-purple-hover: #B5179E;
+  --card-border-hover: #B5179E;
   --main-headline: #C26A00;
-  --color-link-gold: #B8860B;
+  --color-link: #B8860B;
 
   --color-text-main: #0B132B;
   --color-text-muted: #5C677D;
@@ -80,12 +80,12 @@ body.light {
   --color-border-dark: #C5D3E0;
   --color-border-medium: #A9BCCF;
   --color-border-table: #BCD0E4;
-  --color-border-yellow: #C48A4A;
+  --card-border: #C48A4A;
 
-  --card-btn-bg-teal: #2A9D9B;
-  --card-hover-teal-light: #3DB5B3;
-  --card-btn-shadow-coral: #E76F51;
-  --card-btn-text-navy: #0B132B;
+  --card-btn-bg: #2A9D9B;
+  --accent-hover: #3DB5B3;
+  --card-btn-shadow: #E76F51;
+  --card-btn-text: #0B132B;
 
   --navbar-color: #E3EBF3;
   --nav-link-color: #E0A100;

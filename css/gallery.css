@@ -18,6 +18,6 @@
 }
 
 #grid-gallery img:hover {
-    border: 4px solid var(--card-hover-teal-light);
+    border: 4px solid var(--accent-hover);
     transform: scale(1.1);
 }

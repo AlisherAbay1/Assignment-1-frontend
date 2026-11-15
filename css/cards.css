@@ -6,7 +6,7 @@
 #cards-container .card {
     display: flex;
     background-color: var(--card-background);
-    border: 3px solid var(--color-border-yellow);
+    border: 3px solid var(--card-border);
     flex-direction: column;
     align-items: center;
     transition: all 500ms;
@@ -14,7 +14,7 @@
 
 #cards-container .card:hover {
     transform: translateY(-5px);
-    border: 3px solid var(--color-border-purple-hover);
+    border: 3px solid var(--card-border-hover);
 }
 
 #cards-container .card-img {
@@ -23,18 +23,18 @@
 }
 
 #cards-container .card-button {
-    background-color: var(--card-btn-bg-teal);
-    color: var(--card-btn-text-navy);
+    background-color: var(--card-btn-bg);
+    color: var(--card-btn-text);
     font-size: 15px;
     border: none;
     border-radius: 5px;
     transition: all 500ms;
-    box-shadow: 2px 2px var(--card-btn-shadow-coral);
+    box-shadow: 2px 2px var(--card-btn-shadow);
 }
 
 #cards-container .card-button:hover {
     transform: scale(1.08);
-    background-color: var(--card-hover-teal-light);
+    background-color: var(--accent-hover);
 }
 
 #faq-cards div {
