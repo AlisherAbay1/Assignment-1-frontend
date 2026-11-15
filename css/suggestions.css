@@ -1,7 +1,5 @@
-/* Autocomplete suggestions (contact form) */
 .autocomplete {
     position: relative;
-    width: 350.2px;
 }
 
 .autocomplete input {

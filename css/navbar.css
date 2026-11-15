@@ -1,4 +1,3 @@
-/* Navigation bar and the light/dark theme toggle */
 .navbar {
   background-color: var(--navbar-color);
 }
@@ -10,14 +9,39 @@ body.light .navbar {
 .navbar-nav .nav-link {
   background-color: var(--nav-link-color);
   color: var(--nav-text-color);
+  text-align: center;
 }
 
 .change-theme {
   background-color: var(--change-theme-background);
   color: var(--change-theme-text);
+  margin-left: 0.5rem;
 }
 
 .change-theme:hover {
     background-color: var(--change-theme-background);
     border-color: var(--change-theme-text);
 }
+
+.navbar-toggler {
+  --bs-navbar-toggler-border-color: var(--navbar-toggler-border);
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+body.light .navbar-toggler-icon {
+  filter: none;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    gap: 0.5rem;
+  }
+  .navbar-collapse {
+    order: 1;
+  }
+}
+
