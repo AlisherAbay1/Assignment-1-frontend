@@ -1,6 +1,6 @@
 const items = ["HTML", "CSS", "JavaScript", "jQuery", "React", "Vue", "Angular", "Node.js", "PHP", "Python", "Java", "C#", "MySQL", "MongoDB"];
 
-$(".autocomplete input").on("input", function() {
+function handleAutocomplete() {
     const value = $(this).val().toLowerCase();
     const $box = $(".autocomplete #suggestions");
 
@@ -11,20 +11,21 @@ $(".autocomplete input").on("input", function() {
         return;
     }
 
-    const matches = items.filter(function(item) {
-        return item.toLowerCase().includes(value);
-    })
+    const matches = items.filter(item => item.toLowerCase().includes(value));
 
-    matches.forEach(function(item) {
-        $box.append(
-            "<div>" + item + "</div>"
-        );
-    })
+    matches.forEach(appendSuggestion);
 
     $box.toggle(matches.length > 0);
-}) 
+}
 
-$("#suggestions").on("click", "div", function () {
+function appendSuggestion(item) {
+    $("#suggestions").append("<div>" + item + "</div>");
+}
+
+function selectSuggestion() {
     $(".autocomplete input").val($(this).text());
     $("#suggestions").hide();
-});
+}
+
+$(".autocomplete input").on("input", handleAutocomplete);
+$("#suggestions").on("click", "div", selectSuggestion);

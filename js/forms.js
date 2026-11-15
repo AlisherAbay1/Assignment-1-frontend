@@ -31,11 +31,13 @@ function handleContactForm(e) {
     setTimeout(function() {
         buttonDone();
 
+        // Name: one capitalized word, letters only (Unicode)
         if (!/^\p{Lu}(\p{Ll})+$/u.test(name)) {
             formError.textContent = "Your name isn't correct";
             formError.hidden = false;
             return;
         }
+        // Email: local part, "@", domain with at least one dot.
         if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+$/.test(email)) {
             formError.textContent = "Your email isn't correct";
             formError.hidden = false;

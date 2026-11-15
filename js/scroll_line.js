@@ -1,4 +1,4 @@
-$(window).on("scroll", function() {
+function updateProgressBar() {
     const pageHeight = $(document).height();
     const scrolledPixels = $(window).scrollTop();
     const visiblePixels = $(window).height();
@@ -13,4 +13,6 @@ $(window).on("scroll", function() {
     }
 
     $(".progress-bar").css("width", pageSeenPercent + "%");
-}).trigger("scroll");
+}
+
+$(window).on("scroll", updateProgressBar).trigger("scroll");

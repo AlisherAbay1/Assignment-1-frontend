@@ -1,6 +1,5 @@
 const greetingElement  = document.getElementById("time-related-greeting");
 
-
 function updateGreeting() {
     const hour = new Date().getHours();
     let greeting;
