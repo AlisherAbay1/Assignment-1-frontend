@@ -20,9 +20,9 @@ for (const stars of allRatings) {
                     reached = true
                 }
             }
-            $("#n1").css("display", "flex").hide().fadeIn(500);
+            $("#rating-notification").css("display", "flex").hide().fadeIn(500);
             setTimeout(function() {
-                $("#n1").fadeOut(500)
+                $("#rating-notification").fadeOut(500)
             }, 3000)
         })
     }

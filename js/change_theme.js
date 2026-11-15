@@ -8,7 +8,7 @@ function change_theme(theme_button, to) {
 }
 
 
-function change_theme_to_mulltiple_buttons(theme_buttons, to) {
+function change_theme_to_multiple_buttons(theme_buttons, to) {
     for (const theme_button of theme_buttons) {
         change_theme(theme_button, to)
     }
@@ -19,18 +19,18 @@ function handle_theme_toggle() {
     const is_light = document.body.classList.toggle("light");
     localStorage.setItem("light", is_light);
     if (is_light) {
-        change_theme_to_mulltiple_buttons(theme_buttons, "bi-sun")
+        change_theme_to_multiple_buttons(theme_buttons, "bi-sun")
     } else {
-        change_theme_to_mulltiple_buttons(theme_buttons, "bi-moon-fill")
+        change_theme_to_multiple_buttons(theme_buttons, "bi-moon-fill")
     }
 }
 
 
 if (localStorage.getItem("light") === "true") {
     document.body.classList.add("light");
-    change_theme_to_mulltiple_buttons(theme_buttons, "bi-sun")
+    change_theme_to_multiple_buttons(theme_buttons, "bi-sun")
 } else {
-    change_theme_to_mulltiple_buttons(theme_buttons, "bi-moon-fill")
+    change_theme_to_multiple_buttons(theme_buttons, "bi-moon-fill")
 }
 
 

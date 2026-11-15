@@ -3,7 +3,6 @@ $(window).on("scroll", function() {
     const scrolled_pixels = $(window).scrollTop();
     const visible_pixels = $(window).height();
     const top = $(".progress-track")[0].getBoundingClientRect().top;
-    console.log(top);
 
     const page_seen_percent = scrolled_pixels / (page_height - visible_pixels) * 100
 

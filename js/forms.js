@@ -3,7 +3,7 @@ const reset_button = document.querySelector(".clear-button")
 const form_error = document.getElementById("form_error");
 const form_success = document.getElementById("form_success");
 
-function button_in_proccess() {
+function button_in_process() {
     $('.submit-button span').css('visibility', 'hidden');
     $(".submit-button").append('<span class="spinner"></span>');
     $(".submit-button").prop("disabled", true);
@@ -27,7 +27,7 @@ function handle_contact_form(e) {
     form_success.hidden = true;
     form_success.textContent = "";
 
-    button_in_proccess();
+    button_in_process();
     setTimeout(function() {
         button_done();
 

@@ -1,4 +1,4 @@
-var items = ["HTML", "CSS", "JavaScript", "jQuery", "React", "Vue", "Angular", "Node.js", "PHP", "Python", "Java", "C#", "MySQL", "MongoDB"];
+const items = ["HTML", "CSS", "JavaScript", "jQuery", "React", "Vue", "Angular", "Node.js", "PHP", "Python", "Java", "C#", "MySQL", "MongoDB"];
 
 $(".autocomplete input").on("input", function() {
     const value = $(this).val().toLowerCase();
@@ -11,7 +11,7 @@ $(".autocomplete input").on("input", function() {
         return;
     }
 
-    var matches = items.filter(function(item) {
+    const matches = items.filter(function(item) {
         return item.toLowerCase().includes(value)
     })
 
