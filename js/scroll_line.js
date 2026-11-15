@@ -1,10 +1,10 @@
 $(window).on("scroll", function() {
-    const page_height = $(document).height();
-    const scrolled_pixels = $(window).scrollTop();
-    const visible_pixels = $(window).height();
+    const pageHeight = $(document).height();
+    const scrolledPixels = $(window).scrollTop();
+    const visiblePixels = $(window).height();
     const top = $(".progress-track")[0].getBoundingClientRect().top;
 
-    const page_seen_percent = scrolled_pixels / (page_height - visible_pixels) * 100
+    const pageSeenPercent = scrolledPixels / (pageHeight - visiblePixels) * 100
 
     if (top <= 5) {
         $(".progress-track").css("visibility", "visible")
@@ -12,5 +12,5 @@ $(window).on("scroll", function() {
         $(".progress-track").css("visibility", "hidden")
     }
 
-    $(".progress-bar").css("width", page_seen_percent + "%")
+    $(".progress-bar").css("width", pageSeenPercent + "%")
 }).trigger("scroll");

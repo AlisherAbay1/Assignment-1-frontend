@@ -1,8 +1,8 @@
-const clock_time = document.querySelector(".clock-time");
+const clockTime = document.querySelector(".clock-time");
 
-function update_time() {
-    clock_time.textContent = new Date().toLocaleTimeString([], {month: "short", day: "numeric", year: "numeric", hour: "2-digit", minute: "2-digit" });
+function updateTime() {
+    clockTime.textContent = new Date().toLocaleTimeString([], {month: "short", day: "numeric", year: "numeric", hour: "2-digit", minute: "2-digit" });
 }
 
-update_time();
-setInterval(update_time, 1000);
+updateTime();
+setInterval(updateTime, 1000);

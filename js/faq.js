@@ -1,9 +1,9 @@
 const questions = document.querySelectorAll(".faq-card");
 
 for (const question of questions) {
-    function handle_faq(e) {
+    function handleFaq(e) {
         question.classList.toggle("open");
     }
     
-    question.addEventListener("click", handle_faq);
+    question.addEventListener("click", handleFaq);
 }
