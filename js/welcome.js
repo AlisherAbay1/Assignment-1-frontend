@@ -1,4 +1,4 @@
-const greetingElement  = document.getElementById("time-related-greeting")
+const greetingElement  = document.getElementById("time-related-greeting");
 
 
 function updateGreeting() {

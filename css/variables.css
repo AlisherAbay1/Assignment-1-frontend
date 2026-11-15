@@ -2,7 +2,6 @@
   --bg-main: #0B132B;
   --bg-surface: #1C2541;
   --bg-element: #3A506B;
-  --popup-bg: #DDEAF4;
   
   --color-primary: #5BC0BE;
   --color-primary-hover: #4AA4A2;
@@ -19,10 +18,7 @@
   --color-border-table: #1E385B;
   --card-border: #D4A373;
 
-  --card-btn-bg: #5BC0BE;
   --accent-hover: #72D0CE;
-  --card-btn-shadow: #E76F51;
-  --card-btn-text: #0B132B;
 
   --navbar-color: #1C2541;
   --nav-link-color: #6c757d;
@@ -40,7 +36,6 @@
   --clear-button-background: #5ec099;
   --clear-button-text: rgb(42, 17, 36);
 
-  --clock-time: brown;
   --welcome-text: #B5179E;
   --mark: rgba(255, 235, 59, 0.8);
   --spinner: white;
@@ -56,16 +51,12 @@
   --progress-track-bg: rgba(255, 255, 255, 0.32);
   --progress-bar-bg: #6FFFE9;
 
-  --modal-heading-color: #0B132B;
-  --modal-border: #3A506B;
-  --modal-overlay-bg: rgba(0, 0, 0, 0.5);
 }
 
 body.light {
   --bg-main: #F4F7FB;
   --bg-surface: #FFFFFF;
   --bg-element: #DCE6F0;
-  --popup-bg: #FFFFFF;
 
   --color-primary: #2A9D9B;
   --color-primary-hover: #1F7F7D;
@@ -82,10 +73,7 @@ body.light {
   --color-border-table: #BCD0E4;
   --card-border: #C48A4A;
 
-  --card-btn-bg: #2A9D9B;
   --accent-hover: #3DB5B3;
-  --card-btn-shadow: #E76F51;
-  --card-btn-text: #0B132B;
 
   --navbar-color: #E3EBF3;
   --nav-link-color: #E0A100;
@@ -99,7 +87,6 @@ body.light {
   --change-theme-background: #6c757d;
   --change-theme-text: #ffc107;
 
-  --clock-time: rgb(25, 0, 255);
   --welcome-text: #4f7400;
   --spinner: black;
   --notification-border: black;

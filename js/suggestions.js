@@ -4,7 +4,7 @@ $(".autocomplete input").on("input", function() {
     const value = $(this).val().toLowerCase();
     const $box = $(".autocomplete #suggestions");
 
-    $box.empty()
+    $box.empty();
 
     if (value === "") {
         $box.hide();
@@ -12,16 +12,16 @@ $(".autocomplete input").on("input", function() {
     }
 
     const matches = items.filter(function(item) {
-        return item.toLowerCase().includes(value)
+        return item.toLowerCase().includes(value);
     })
 
     matches.forEach(function(item) {
         $box.append(
             "<div>" + item + "</div>"
-        )
+        );
     })
 
-    $box.toggle(matches.length > 0)
+    $box.toggle(matches.length > 0);
 }) 
 
 $("#suggestions").on("click", "div", function () {

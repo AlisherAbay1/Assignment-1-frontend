@@ -17,12 +17,12 @@ for (const stars of allRatings) {
                     s.classList.replace('bi-star-fill', 'bi-star');
                 }
                 if (s === star) {
-                    reached = true
+                    reached = true;
                 }
             }
             $("#rating-notification").css("display", "flex").hide().fadeIn(500);
             setTimeout(function() {
-                $("#rating-notification").fadeOut(500)
+                $("#rating-notification").fadeOut(500);
             }, 3000)
         })
     }

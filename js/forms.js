@@ -1,5 +1,5 @@
 const contactForm = document.getElementById("contact-form");
-const resetButton = document.querySelector(".clear-button")
+const resetButton = document.querySelector(".clear-button");
 const formError = document.getElementById("form-error");
 const formSuccess = document.getElementById("form-success");
 
@@ -69,4 +69,4 @@ function resetForm() {
 }
 
 contactForm.addEventListener("submit", handleContactForm);
-resetButton.addEventListener("click", resetForm)
+resetButton.addEventListener("click", resetForm);
