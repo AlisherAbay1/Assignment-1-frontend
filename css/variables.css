@@ -1,3 +1,4 @@
+/* Design tokens: dark theme in :root, light theme in body.light */
 :root {
   --bg-main: #0B132B;
 

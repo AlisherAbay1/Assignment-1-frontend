@@ -1,0 +1,23 @@
+/* Navigation bar and the light/dark theme toggle */
+.navbar {
+  background-color: var(--navbar-color);
+}
+
+body.light .navbar {
+  font-family: Lucida Sans Unicode;
+}
+
+.navbar-nav .nav-link {
+  background-color: var(--nav-link-color);
+  color: var(--nav-text-color);
+}
+
+.change-theme {
+  background-color: var(--change-theme-background);
+  color: var(--change-theme-text);
+}
+
+.change-theme:hover {
+    background-color: var(--change-theme-background);
+    border-color: var(--change-theme-text);
+}

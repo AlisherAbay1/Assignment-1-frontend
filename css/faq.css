@@ -1,3 +1,4 @@
+/* FAQ page: accordion cards and search */
 .faq-card .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -21,4 +22,12 @@
 #faq-search {
     width: calc(100% - 20px);
     margin: 10px;
+}
+
+#faq-cards div {
+    transition: all 500ms;
+}
+
+#faq-cards div:hover {
+    transform: scale(1.01);
 }

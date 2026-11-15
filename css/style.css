@@ -1,3 +1,4 @@
+/* Base styles: page background, typography, shared containers */
 body {
   background-color: var(--bg-main);
   margin-left: 10px;
@@ -6,10 +7,6 @@ body {
 
 body.light .main-headline {
   font-family: cursive;
-}
-
-body.light .navbar {
-  font-family: Lucida Sans Unicode;
 }
 
 p, li, label {
@@ -45,11 +42,6 @@ article {
   border: 1px solid var(--color-border-medium);
 }
 
-#main-welcome-block {
-  display: flex;
-  gap: 10px;
-}
-
 footer p {
   color: var(--color-text-muted);
   font-size: small;
@@ -57,143 +49,7 @@ footer p {
   font-weight: 700;
 }
 
-.bi-star, .bi-star-fill {
-  font-size: 25px;
-}
-
-.rating {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.navbar {
-  background-color: var(--navbar-color);
-}
-
-.navbar-nav .nav-link {
-  background-color: var(--nav-link-color);
-  color: var(--nav-text-color);
-}
-
-.star i {
-  display: inline-block;
-  transition: transform 0.2s ease, color 0.2s ease;
-  cursor: pointer;
-}
-
-.star i:hover {
-  transform: scale(1.2);
-}
-
-.star i:active {
-  transform: scale(0.9);
-}
-
-.star i.bi-star {
-  color: var(--star-empty-color);
-}
-
-.star i.bi-star-fill { 
-  color: var(--star-color); 
-}
-
-.change-theme {
-  background-color: var(--change-theme-background);
-  color: var(--change-theme-text);
-}
-
-.change-theme:hover {
-    background-color: var(--change-theme-background);
-    border-color: var(--change-theme-text);
-}
-
-.submit-button {
-  background-color: var(--submit-button-background);
-  color: var(--submit-button-text);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.submit-button:hover {
-  background-color: var(--submit-button-background);
-  color: var(--submit-button-text);
-}
-
-.clear-button {
-  background-color: var(--clear-button-background);
-  color: var(--clear-button-text);
-  
-}
-
-.clear-button:hover {
-  background-color: var(--clear-button-background);
-  color: var(--clear-button-text);
-}
-
-#buttons-container {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-#contact-form {
-  position: relative;
-}
-
-#welcome-section {
-  display: flex;
-  justify-content: center;
-}
-
-#welcome-section h1 {
-  color: var(--welcome-text);
-}
-
 mark {
   background: var(--mark);
   padding: 0;
 }
-
-.spinner {
-  display: inline-block;
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  top: 50%;
-  left: 50%;
-  border: 2px solid var(--spinner);
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-top: -7px;
-  margin-left: -7px;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.notification {
-  display: none;
-  position: fixed;
-  top: 8px;
-  right: 8px;
-  width: 450px;
-  height: 40px;
-  background-color: var(--notification);
-  border: 1px solid var(--notification-border);
-  align-items: center;
-}
-
-.notification p {
-  color: var(--notification-text);
-  font-size: large;
-  font-family: cursive;
-  padding: 0px;
-  margin: 0px;
-  margin-left: 4px;
-}
-

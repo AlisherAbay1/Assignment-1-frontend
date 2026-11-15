@@ -1,0 +1,10 @@
+/* Contact page: form layout */
+#contact-form {
+  position: relative;
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}

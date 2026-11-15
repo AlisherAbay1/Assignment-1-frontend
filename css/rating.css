@@ -1,0 +1,52 @@
+/* Star rating and the notification shown after rating */
+.bi-star, .bi-star-fill {
+  font-size: 25px;
+}
+
+.rating {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.star i {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.star i:hover {
+  transform: scale(1.2);
+}
+
+.star i:active {
+  transform: scale(0.9);
+}
+
+.star i.bi-star {
+  color: var(--star-empty-color);
+}
+
+.star i.bi-star-fill { 
+  color: var(--star-color); 
+}
+
+.notification {
+  display: none;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  width: 450px;
+  height: 40px;
+  background-color: var(--notification);
+  border: 1px solid var(--notification-border);
+  align-items: center;
+}
+
+.notification p {
+  color: var(--notification-text);
+  font-size: large;
+  font-family: cursive;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 4px;
+}
