@@ -1,6 +1,12 @@
-const authForm = document.getElementById("login-form");
+const authForm = document.getElementById("signup-form");
 const formError = document.getElementById("form-error");
 const formSuccess = document.getElementById("form-success");
+const loginForm = document.getElementById("login-form");
+const loginFormError = document.getElementById("login-form-error");
+const loginFormSuccess = document.getElementById("login-form-success");
+
+
+// toggle
 
 function toggle_password() {
     const input = $(this).siblings("input");
@@ -14,6 +20,8 @@ function toggle_password() {
     icon.toggleClass("bi-eye-slash", isHidden);
 }
 
+// signup
+
 function validateNickname() {
     const value = document.getElementById("nickname").value.trim();
 
@@ -23,8 +31,8 @@ function validateNickname() {
     return "";
 }
 
-function validateEmail() {
-    const value = document.getElementById("email").value.trim();
+function validateEmail(id) {
+    const value = document.getElementById(id).value.trim();
 
     if (!value) {
         return "Email can't be empty";
@@ -93,7 +101,9 @@ const fields = [
     {
         id: "email",
         controls: [document.getElementById("email")],
-        validate: validateEmail
+        validate: function () {
+                    return validateEmail("email");
+                }
     },
     {
         id: "password",
@@ -141,19 +151,19 @@ function clearAllMessages() {
     formError.hidden = true;
 }
 
-function buttonInProcess() {
-    $('.submit-auth-button span').css('visibility', 'hidden');
-    $(".submit-auth-button").append('<span class="spinner"></span>');
-    $(".submit-auth-button").prop("disabled", true);
+function buttonInProcess(sendButton) {
+    $(sendButton + ' span').css('visibility', 'hidden');
+    $(sendButton).append('<span class="spinner"></span>');
+    $(sendButton).prop("disabled", true);
 }
 
-function buttonDone() {
-    $(".submit-auth-button .spinner").remove();
-    $(".submit-auth-button").prop("disabled", false);
-    $('.submit-auth-button span').css('visibility', 'visible');
+function buttonDone(sendButton) {
+    $(sendButton + " .spinner").remove();
+    $(sendButton).prop("disabled", false);
+    $(sendButton + ' span').css('visibility', 'visible');
 }
 
-function handleAuthForm(e) {
+function handleSignupForm(e) {
     e.preventDefault();
     clearAllMessages();
 
@@ -178,9 +188,10 @@ function handleAuthForm(e) {
         return;
     }
 
-    buttonInProcess();
+    buttonInProcess("#signup-button");
+
     setTimeout(function () {
-        buttonDone();
+        buttonDone("#signup-button");
         formSuccess.textContent = "Form sent successfully";
         formSuccess.hidden = false;
     }, 1000);
@@ -198,5 +209,84 @@ fields.forEach(function (field) {
     });
 });
 
-$("#toggle-password, #toggle-confirm-password").on("click", toggle_password);
-$("#login-form").on("submit", handleAuthForm);
+// login
+
+function validateLoginPassword() {
+    const value = document.getElementById("login-password").value;
+
+    if (!value) {
+        return "Password can't be empty";
+    }
+
+    return "";
+}
+
+const loginFields = [
+    {
+        id: "login-email",
+        controls: [document.getElementById("login-email")],
+        validate: function () {
+                    return validateEmail("login-email");
+                }
+    },
+    {
+        id: "login-password",
+        controls: [document.getElementById("login-password")],
+        validate: validateLoginPassword
+    }
+];
+
+function handleLoginForm(e) {
+    e.preventDefault();
+
+    loginFields.forEach(clearFieldError);
+    loginFormError.textContent = "";
+    loginFormError.hidden = true;
+    loginFormSuccess.textContent = "";
+    loginFormSuccess.hidden = true;
+
+    const invalidFields = loginFields.filter(function (field) {
+        const message = field.validate();
+
+        if (message) {
+            showFieldError(field, message);
+        }
+
+        return Boolean(message);
+    });
+
+    if (invalidFields.length > 0) {
+        loginFormError.textContent = invalidFields.length === 1
+            ? "Please fix the highlighted field."
+            : "Please fix the " + invalidFields.length + " highlighted fields.";
+
+        loginFormError.hidden = false;
+        invalidFields[0].controls[0].focus();
+
+        return;
+    }
+
+    buttonInProcess("#login-button");
+
+    setTimeout(function () {
+        buttonDone("#login-button");
+        loginFormSuccess.textContent = "Login successful";
+        loginFormSuccess.hidden = false;
+    }, 1000);
+}
+
+loginFields.forEach(function (field) {
+    field.controls.forEach(function (control) {
+        control.addEventListener("input", function () {
+            clearFieldError(field);
+        });
+
+        control.addEventListener("change", function () {
+            clearFieldError(field);
+        });
+    });
+});
+
+$("#login-form").on("submit", handleLoginForm);
+$("#toggle-password, #toggle-confirm-password, #login-toggle-password").on("click", toggle_password);
+$("#signup-form").on("submit", handleSignupForm);

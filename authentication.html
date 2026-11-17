@@ -69,6 +69,26 @@
                 <div class="tab-content" id="auth-tab-content">
                     <div class="tab-pane fade show active" id="login-pane" role="tabpanel" aria-labelledby="login-tab">
                         <form action="#" method="post" id="login-form" class="d-flex flex-column gap-2 align-items-center mt-3" novalidate>
+                            <label for="login-email" class="main-label">Email:</label>
+                            <input type="text" id="login-email" name="email" class="form-control w-50" placeholder="Enter your email">
+                            <small id="login-email-error" class="text-danger" hidden></small>
+                            <label for="login-password" class="main-label">Password:</label>
+                            <div class="input-group w-50">
+                                <input type="password" id="login-password" name="password" class="form-control" placeholder="Enter your password">
+                                <button class="btn bg-white" type="button" id="login-toggle-password">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <small id="login-password-error" class="text-danger" hidden></small>
+                            <button type="submit" class="btn submit-auth-button" id="login-button">
+                                <span>Submit</span>
+                            </button>
+                        </form>
+                        <div class="bg-danger text-white border border-info-subtle p-2 m-2" id="login-form-error" hidden></div>
+                        <div class="bg-success text-white border border-info-subtle p-2 m-2" id="login-form-success" hidden></div> 
+                    </div>
+                    <div class="tab-pane fade" id="signup-pane" role="tabpanel" aria-labelledby="signup-tab">
+                        <form action="#" method="post" id="signup-form" class="d-flex flex-column gap-2 align-items-center mt-3" novalidate>
                             <label for="nickname" class="main-label">Nickname:</label>
                             <input type="text" id="nickname" name="nickname" class="form-control w-50" placeholder="Enter your nickname">
                             <small id="nickname-error" class="text-danger" hidden></small>
@@ -95,14 +115,12 @@
                                 </button>
                             </div>
                             <small id="confirm-password-error" class="text-danger" hidden></small>
-                            <button type="submit" class="btn submit-auth-button">
+                            <button type="submit" class="btn submit-auth-button" id="signup-button">
                                 <span>Submit</span>
                             </button>
                         </form>
                         <div class="bg-danger text-white border border-info-subtle p-2 m-2" id="form-error" hidden></div>
                         <div class="bg-success text-white border border-info-subtle p-2 m-2" id="form-success" hidden></div>  
-                    </div>
-                    <div class="tab-pane fade" id="signup-pane" role="tabpanel" aria-labelledby="signup-tab">
                     </div>
                 </div>
             </div>
