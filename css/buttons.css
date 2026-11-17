@@ -14,12 +14,22 @@
 .clear-button {
   background-color: var(--clear-button-background);
   color: var(--clear-button-text);
-  
 }
 
 .clear-button:hover {
   background-color: var(--clear-button-background);
   color: var(--clear-button-text);
+}
+
+.submit-auth-button {
+  position: relative;
+  background-color: var(--submit-button-background);
+  color: var(--submit-button-text);
+}
+
+.submit-auth-button:hover {
+  background-color: var(--submit-button-background);
+  color: var(--submit-button-text);
 }
 
 .spinner {

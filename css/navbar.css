@@ -12,13 +12,15 @@ body.light .navbar {
   text-align: center;
 }
 
-.change-theme {
+.change-theme,
+.auth {
   background-color: var(--change-theme-background);
   color: var(--change-theme-text);
   margin-left: 0.5rem;
 }
 
-.change-theme:hover {
+.change-theme:hover, 
+.auth:hover {
     background-color: var(--change-theme-background);
     border-color: var(--change-theme-text);
 }
