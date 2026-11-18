@@ -24,15 +24,21 @@ function toggle_password() {
 
 function validateNickname() {
     const value = document.getElementById("nickname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const userData = JSON.parse(localStorage.getItem(email));
 
     if (!value) {
-        return "Nickname can't be empty";
+        return "Nickname can't be empty.";
+    }
+
+    if (userData !== null && userData.nickname === value) {
+        return "Nickname is already taken."
     }
     return "";
 }
 
-function validateEmail(id) {
-    const value = document.getElementById(id).value.trim();
+function validateEmail() {
+    const value = document.getElementById("email").value.trim();
 
     if (!value) {
         return "Email can't be empty";
@@ -41,6 +47,10 @@ function validateEmail(id) {
     // Checks the basic email structure: local part, @, domain and extension.
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
         return "Please enter a valid email address";
+    }
+
+    if (localStorage.getItem(value) !== null) {
+        return "Email is already taken.";
     }
 
     return "";
@@ -130,9 +140,7 @@ const fields = [
     {
         id: "email",
         controls: [document.getElementById("email")],
-        validate: function () {
-                    return validateEmail("email");
-                }
+        validate: validateEmail
     },
     {
         id: "password",
@@ -252,6 +260,21 @@ fields.forEach(function (field) {
 
 // login
 
+function validateLoginEmail() {
+    const value = document.getElementById("login-email").value.trim();
+
+    if (!value) {
+        return "Email can't be empty";
+    }
+
+    // Checks the basic email structure: local part, @, domain and extension.
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        return "Please enter a valid email address";
+    }
+
+    return "";
+}
+
 function validateLoginPassword() {
     const value = document.getElementById("login-password").value;
 
@@ -266,9 +289,7 @@ const loginFields = [
     {
         id: "login-email",
         controls: [document.getElementById("login-email")],
-        validate: function () {
-                    return validateEmail("login-email");
-                }
+        validate: validateLoginEmail
     },
     {
         id: "login-password",
