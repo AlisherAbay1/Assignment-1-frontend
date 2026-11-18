@@ -75,21 +75,50 @@ function validateConfirmPassword() {
     return "";
 }
 
-function validatePhone() {
+async function validatePhone() {
     const value = document.getElementById("phone").value.trim();
 
     if (!value) {
         return "Phone number can't be empty";
     }
 
-    // Validates an international phone number.
     const phonePattern = /^\+[1-9]\d{1,14}$/;
+    const normalizedPhone = value.replace(/[\s()-]/g, "");
 
-    if (!phonePattern.test(value.replace(/[\s()-]/g, ""))) {
+    if (!phonePattern.test(normalizedPhone)) {
         return "Please enter a valid international phone number";
     }
 
-    return "";
+    try {
+        const params = new URLSearchParams({
+            api_key: "8f02e50d2d084daab23a19fcd40c4a068509a9c47dd53952d3",
+            phone_number: normalizedPhone
+        });
+
+        const response = await fetch(
+            `https://lookup.proweblook.com/api/v1/phonevalidation?${params}`
+        );
+
+        if (!response.ok) {
+            return "Phone validation service is unavailable";
+        }
+
+        const data = await response.json();
+
+        if (data.status === "INVALID") {
+            return "This phone number is invalid";
+        }
+
+        if (data.status !== "VALID_CONFIRMED") {
+            return "Unable to verify phone number";
+        }
+
+        return "";
+
+    } catch (error) {
+        console.error(error);
+        return "Phone validation service is unavailable";
+    }
 }
 
 const fields = [
@@ -163,19 +192,20 @@ function buttonDone(sendButton) {
     $(sendButton + ' span').css('visibility', 'visible');
 }
 
-function handleSignupForm(e) {
+async function handleSignupForm(e) {
     e.preventDefault();
     clearAllMessages();
 
-    const invalidFields = fields.filter(function (field) {
-        const message = field.validate();
+    const invalidFields = [];
+
+    for (const field of fields) {
+        const message = await field.validate();
 
         if (message) {
             showFieldError(field, message);
+            invalidFields.push(field);
         }
-
-        return Boolean(message);
-    });
+    }
 
     if (invalidFields.length > 0) {
         formError.textContent = invalidFields.length === 1
@@ -192,13 +222,18 @@ function handleSignupForm(e) {
 
     setTimeout(function () {
         const userData = {
-            "nickname": document.getElementById("nickname").value, 
-            "password": document.getElementById("password").value, 
-            "phone": document.getElementById("phone").value
-        }
-        localStorage.setItem(document.getElementById("email").value, JSON.stringify(userData))
+            nickname: document.getElementById("nickname").value,
+            password: document.getElementById("password").value,
+            phone: document.getElementById("phone").value
+        };
+
+        localStorage.setItem(
+            document.getElementById("email").value,
+            JSON.stringify(userData)
+        );
+
         buttonDone("#signup-button");
-        formSuccess.textContent = "Account created sucessfully.";
+        formSuccess.textContent = "Account created successfully.";
         formSuccess.hidden = false;
     }, 1000);
 }
