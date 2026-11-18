@@ -16,7 +16,7 @@ function loadProfileInfo() {
 
 function logout() {
     localStorage.removeItem("currentUser");
-    window.location.replace("/authentication.html");
+    window.location.replace("authentication.html");
 }
 
 logoutButton.addEventListener("click", logout)

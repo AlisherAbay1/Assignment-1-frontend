@@ -345,7 +345,7 @@ function handleLoginForm(e) {
 
     setTimeout(function () {
         localStorage.setItem("currentUser", document.getElementById("login-email").value);
-        window.location.replace("/profile.html");
+        window.location.replace("profile.html");
         buttonDone("#login-button");
         loginFormSuccess.textContent = "Login successful.";
         loginFormSuccess.hidden = false;
