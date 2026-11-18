@@ -23,17 +23,25 @@ function fillStars(stars, selectedStar) {
 function saveRating(selectedStar) {
     const ratingBlock = selectedStar.closest(".rating");
     const value = Number(selectedStar.closest(".star").dataset.value);
+    const storageKey = ratingBlock.id.replace("profile-", "");
 
-    localStorage.setItem(ratingBlock.id, value);
+    localStorage.setItem(
+        storageKey + ":" + localStorage.getItem("currentUser"),
+        value
+    );
 }
 
 function restoreRating(stars) {
     if (stars.length === 0) {
         return;
     }
+
     const ratingBlock = stars[0].closest(".rating");
     const storageKey = ratingBlock.id.replace("profile-", "");
-    const savedValue = Number(localStorage.getItem(storageKey));
+
+    const savedValue = Number(
+        localStorage.getItem(storageKey + ":" + localStorage.getItem("currentUser"))
+    );
 
     const savedStar = Array.from(stars).find(function (star) {
         return Number(star.closest(".star").dataset.value) === savedValue;
