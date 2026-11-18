@@ -191,8 +191,14 @@ function handleSignupForm(e) {
     buttonInProcess("#signup-button");
 
     setTimeout(function () {
+        const userData = {
+            "nickname": document.getElementById("nickname").value, 
+            "password": document.getElementById("password").value, 
+            "phone": document.getElementById("phone").value
+        }
+        localStorage.setItem(document.getElementById("email").value, JSON.stringify(userData))
         buttonDone("#signup-button");
-        formSuccess.textContent = "Form sent successfully";
+        formSuccess.textContent = "Account created sucessfully.";
         formSuccess.hidden = false;
     }, 1000);
 }
@@ -266,11 +272,26 @@ function handleLoginForm(e) {
         return;
     }
 
+    const userData = localStorage.getItem(document.getElementById("login-email").value)
+
+    if (userData === null) {
+        loginFormError.textContent = "Account doesn't exists.";
+        loginFormError.hidden = false;
+        return;
+    }
+    if (JSON.parse(userData).password !== document.getElementById("login-password").value) {
+        loginFormError.textContent = "Password incorrect.";
+        loginFormError.hidden = false;
+        return;
+    }
+
     buttonInProcess("#login-button");
 
     setTimeout(function () {
+        localStorage.setItem("currentUser", document.getElementById("login-email").value);
+        window.location.replace("/profile.html");
         buttonDone("#login-button");
-        loginFormSuccess.textContent = "Login successful";
+        loginFormSuccess.textContent = "Login successful.";
         loginFormSuccess.hidden = false;
     }, 1000);
 }

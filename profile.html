@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevPulse: Profile</title>
+        <link rel="stylesheet" href="css/variables.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/navbar.css" />
+        <link rel="stylesheet" href="css/auth.css" />
+        <link rel="stylesheet" href="css/buttons.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headline-container">
+                <h1 class="main-headline">Profile</h1>
+            </div>
+            <nav class="navbar navbar-expand-lg p-0  mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/devpulse-logo.jpg" alt="logo of the DevPulse" width="60" class="rounded-circle">
+                    </a>
+                    <button 
+                        class="navbar-toggler" 
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbar-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <div class="navbar-nav justify-content-evenly w-100">
+                            <a href="index.html" class="nav-link rounded-3">Main</a>
+                            <a href="services.html" class="nav-link rounded-3">Services</a>
+                            <a href="projects.html" class="nav-link rounded-3">Projects</a>
+                            <a href="about.html" class="nav-link rounded-3">About us</a>
+                            <a href="contact.html" class="nav-link rounded-3">Contacts</a>
+                            <a href="blog.html" class="nav-link rounded-3">Blog</a>
+                            <a href="faq.html" class="nav-link rounded-3">FAQ</a>
+                        </div>
+                    </div>
+                    <a href='authentication.html' class="auth btn" aria-label="Log in or sign up">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <button class="change-theme btn"><i class="bi bi-moon-fill"></i></button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <section class="ps-2 pt-2 ps-lg-3 pt-lg-3 text-center">
+                    <h2>Info</h2>
+                    <p id="nickname">Nickname: </p>
+                    <p id="email">Email: </p>
+                    <p id="phone-number">Phone number: </p>
+                </section>
+                <section class="ps-2 pt-2 ps-lg-3 pt-lg-3 text-center">
+                    <h2>Saved data</h2>
+                    
+                </section>
+            </article>
+        </main>
+        <footer class="m-2 m-sm-1">
+            <p>Team: Abay Alisher, Nurmukhanbet Aral</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+        <script src="js/profile.js"></script>
+    </body>
+</html>
